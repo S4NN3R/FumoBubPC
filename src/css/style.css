@@ -12,6 +12,14 @@ header {
     left: 0;
     top: 0;
     right: 0;
+    z-index: 1000;
+}
+main {
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    width: 81%;
+    margin-bottom: 4vh;
 }
 .header-all {
     width: 100%;
@@ -42,10 +50,11 @@ header {
     width: 17%;
 }
 .container {
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
+    width: 100%!important;
+    margin-right: auto!important;
+    margin-left: auto!important;
+    display: flex!important;
+    max-width: 100%;
 }
 .home-main {
     width: 100%;
@@ -57,6 +66,8 @@ header {
 }
 .home-main-right {
     width: 80%;
+    border-radius: 2vh;
+    box-shadow: 0 1.3vh 1.3vh 0.5vh #00000057;
 }
 .home-main-left-links img {
     width: 100%;
@@ -67,6 +78,8 @@ header {
 .home-main-left-links-image {
     width: 100%;
     height: 100%;
+    border-radius: 2vh;
+    box-shadow: 0 1.3vh 1.3vh 0.5vh #00000057;
 }
 .home-main-left-links {
     width: 85%;
@@ -148,6 +161,12 @@ header {
 }
 .ogls .genres {
     display: flex;
+}
+.ogls .studio {
+    text-shadow: 0 0.1vh black;
+}
+.ogls .episodes {
+    text-shadow: 0 0.1vh black;
 }
 .home-main-right-swiper {
     position: relative;
@@ -232,3 +251,287 @@ header {
     -webkit-transition: .3s;
     transition: .3s;
   }
+  .anime-list {
+    width: 100%;
+  }
+  .anime-card img {
+    width: 100%;
+  }
+  .anime-card {
+    width: 18%;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 2vh;
+    margin-right: 2vh;
+  }
+  .anime-card:hover {
+    color: #fff;
+  }
+  .title-list-name {
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+  }
+  .title-list-name-btns {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .title-list-title {
+    font-size: 3vh;
+  }
+  .title-list-btn {
+    
+  }
+  .title-list-btn a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2vh;
+    background: #15244B;
+    border-radius: 1vh;
+    padding: 0.5vh;
+  }
+  .anime-image {
+    position: relative;
+    box-shadow: 0 1.3vh 1.3vh 0.5vh #00000057;
+    border-radius: 2vh;
+    display: flex;
+  }
+  .anime-poster-episodes {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    text-align: center;
+    color: var(--text-prmary);
+    padding-bottom: 1vh;
+    font-size: 2.5vh;
+  }
+  .anime-image::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(47.24%, rgba(25, 40, 82, 0)), color-stop(94.78%, rgba(25, 40, 82, 0.5)));
+    background: linear-gradient(180deg, rgba(25, 40, 82, 0) 47.24%, rgba(25, 40, 82, 0.5) 94.78%);
+    border-radius: 2vh;
+  }
+  .anime-image img {
+    border-radius: 2vh;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 9 / 13;
+  }
+  .anime-list-title {
+    width: 100%;
+    display: -webkit-box;
+    font-size: 2.2vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    text-align: center;
+    -webkit-box-orient: vertical;
+  }
+
+
+
+
+
+
+  .navbar-custom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: transparent;
+    z-index: 1000;
+    -webkit-transition: .5s;
+    transition: .5s;
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    height: auto;
+    height: 6vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .navbar-brand {
+      width: 11.5%;
+  }
+  .navbar-list {
+    display: flex!important;
+    flex-basis: auto;
+    flex-grow: 1;
+    align-items: center;
+    width: 88.5%;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    color: #C8C6DA;
+    margin-right: auto!important;
+    width: 63%;
+  }
+  .nav-link {
+    margin-left: 1vh;
+    font-size: 1vw;
+  }
+  .search {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5vh;
+    padding: 0.2% 0.6%;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            display: flex;
+    height: 4vh;
+  }
+  
+  .search button {
+    background: none;
+    border: none;
+    position: relative;
+    padding-left: 1.4vh;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 4vh;
+  }
+  
+  .search button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(217, 217, 217, 0.2);
+    width: 0.2vh;
+    height: 100%;
+  }
+  
+  .search input {
+    padding: 0.5vh;
+    background: none;
+    border: none;
+    color: white;
+    outline: none !important;
+    width: 90%;
+    font-size: 0.8vw;
+  }
+  .search input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  html body .navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: transparent;
+    z-index: 1000;
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  
+  html body .navbar.navbar-fixed {
+    background-color: #15244bb8;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  
+  html body .navbar .navbar-brand span {
+    display: none;
+  }
+  
+  html body .navbar form[role=search] {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 5px 10px;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  
+  html body .navbar form[role=search] button {
+    background: none;
+    border: none;
+    position: relative;
+    padding-left: 15px;
+  }
+  
+  html body .navbar form[role=search] button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(217, 217, 217, 0.2);
+    width: 1px;
+    height: 100%;
+  }
+  
+  html body .navbar form[role=search] input {
+    padding: 0;
+    background: none;
+    border: none;
+    color: white;
+    min-width: 186px;
+    outline: none !important;
+  }
+  .btn-header-right {
+    display: flex;
+    width: 16%;
+  }
+  .btn-header-right a {
+    height: 4vh;
+    display: flex;
+    align-items: center;
+  }
+  .foryou {
+    color: #FFFFFF;
+    margin-left: 20px;
+  }
+  .dropdown-menu {
+    background: #3f4b6d;
+    border-radius: 5px;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    border: 0;
+  }
+  .dropdown-item {
+    color: #FFFFFF;
+  }
+  .login-btn {
+    list-style: none;
+  }
+  .login-btn .dropdown-menu {
+    background: #192852;
+    border-radius: 5px;
+    border: 0;
+    padding: 5px;
+  }
+  .login {
+    display: flex;
+    flex-direction: column;
+  }
+  ::-webkit-scrollbar {
+    background-color: #192852;
+    width: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #F2BF83;
+    border-radius: 10px;
+}

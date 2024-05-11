@@ -1,5 +1,6 @@
 $(document).ready(function() {
     initSwiper();
+    initAnimeSwiper();
     initScrollHandler();
     toggleSwiperInfoContent(); // Добавлен вызов функции для переключения отображения swiper-info-content при загрузке страницы
     toggleIm01Brightness(); // Добавлен вызов функции для переключения яркости элемента im01 при загрузке страницы
@@ -9,12 +10,13 @@ $(document).ready(function() {
     });
 });
 
+
 function initSwiper() {
     new Swiper(".home-main-right-swiper", {
-        loop: true,
+        loop: false,
         speed: 1000,
         autoplay: {
-            delay: 10000,
+            delay: 30000,
             disableOnInteraction: false,
         },
         pagination: {
@@ -27,6 +29,25 @@ function initSwiper() {
         }
     });
 }
+
+function initAnimeSwiper() {
+    new Swiper('.anime-list-swiper', {
+        // Optional parameters
+        loop: false,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        initialSlide: 2,
+  
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+}
+
+
+
 
 function toggleSwiperInfoContent() {
     if ($(window).width() < 1200 || $(window).height() < 500) {
@@ -44,7 +65,6 @@ function toggleIm01Brightness() {
     }
 }
 
-
 function initScrollHandler() {
     window.onscroll = function() {
         if (window.pageYOffset >= 100) {
@@ -54,4 +74,3 @@ function initScrollHandler() {
         }
     }
 }
-

@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;900&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="src/css/style.css">
 
   <!-- scripts -->
@@ -22,38 +23,75 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="src/js/js.js"></script>
+  <script src="src/js/lazyload.min.js"></script>
 
 </head>
 
 <body>
     <header>
-        <div class="header-all">
-            <div class="header-main">
-                <div class="header-menu">
-                    <a class="header-brand" href="index.html">
-                        <svg width="100%" height="100%" viewBox="0 0 150 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M2.618 34.5V12.332H16.592V16.548H7.616V21.682H15.3V25.898H7.616V34.5H2.618ZM29.1861 34.908C26.3074 34.908 24.1087 34.058 22.5901 32.358C21.0714 30.658 20.3121 27.9493 20.3121 24.232V12.332H25.3441V24.742C25.3441 26.918 25.6727 28.4367 26.3301 29.298C26.9874 30.1593 27.9394 30.59 29.1861 30.59C30.4327 30.59 31.3961 30.1593 32.0761 29.298C32.7561 28.4367 33.0961 26.918 33.0961 24.742V12.332H37.9241V24.232C37.9241 27.9493 37.1761 30.658 35.6801 32.358C34.2067 34.058 32.0421 34.908 29.1861 34.908ZM43.0594 34.5V12.332H48.5334L52.1034 22.192C52.3301 22.8267 52.5454 23.4953 52.7494 24.198C52.9534 24.9007 53.1687 25.592 53.3954 26.272H53.5314C53.7581 25.592 53.9621 24.9007 54.1434 24.198C54.3474 23.4953 54.5627 22.8267 54.7894 22.192L58.2914 12.332H63.7314V34.5H59.1754V26.374C59.1754 25.6487 59.2094 24.844 59.2774 23.96C59.3681 23.0533 59.4587 22.1467 59.5494 21.24C59.6627 20.3333 59.7534 19.5287 59.8214 18.826H59.6854L57.8834 24.096L54.7214 32.562H51.9674L48.8054 24.096L47.0374 18.826H46.9014C46.9921 19.5287 47.0827 20.3333 47.1734 21.24C47.2641 22.1467 47.3434 23.0533 47.4114 23.96C47.5021 24.844 47.5474 25.6487 47.5474 26.374V34.5H43.0594ZM89.8198 34.5V12.196H95.3958C98.8411 12.196 101.459 13.1593 103.25 15.086C105.04 16.99 105.936 19.71 105.936 23.246C105.936 26.8047 105.04 29.57 103.25 31.542C101.482 33.514 98.9091 34.5 95.5318 34.5H89.8198ZM92.6418 32.188H95.1918C97.7984 32.188 99.7478 31.406 101.04 29.842C102.354 28.2553 103.012 26.0567 103.012 23.246C103.012 20.4353 102.354 18.282 101.04 16.786C99.7478 15.2673 97.7984 14.508 95.1918 14.508H92.6418V32.188ZM118.66 34.908C117.141 34.908 115.77 34.602 114.546 33.99C113.344 33.378 112.392 32.3693 111.69 30.964C110.987 29.5587 110.636 27.666 110.636 25.286V12.196H113.458V25.354C113.458 27.1447 113.684 28.5613 114.138 29.604C114.614 30.624 115.237 31.3493 116.008 31.78C116.801 32.2107 117.685 32.426 118.66 32.426C119.657 32.426 120.552 32.2107 121.346 31.78C122.139 31.3493 122.762 30.624 123.216 29.604C123.692 28.5613 123.93 27.1447 123.93 25.354V12.196H126.65V25.286C126.65 27.666 126.298 29.5587 125.596 30.964C124.893 32.3693 123.941 33.378 122.74 33.99C121.538 34.602 120.178 34.908 118.66 34.908ZM132.652 34.5V12.196H139.282C140.8 12.196 142.126 12.3773 143.26 12.74C144.416 13.1027 145.311 13.6807 145.946 14.474C146.603 15.2673 146.932 16.3213 146.932 17.636C146.932 18.7467 146.648 19.7553 146.082 20.662C145.538 21.546 144.733 22.158 143.668 22.498V22.634C145.005 22.8833 146.093 23.45 146.932 24.334C147.793 25.218 148.224 26.4307 148.224 27.972C148.224 29.4227 147.861 30.6353 147.136 31.61C146.433 32.5847 145.447 33.31 144.178 33.786C142.908 34.262 141.435 34.5 139.758 34.5H132.652ZM135.474 21.682H138.772C140.676 21.682 142.047 21.3533 142.886 20.696C143.724 20.0387 144.144 19.1433 144.144 18.01C144.144 16.718 143.702 15.8 142.818 15.256C141.956 14.712 140.653 14.44 138.908 14.44H135.474V21.682ZM135.474 32.256H139.35C141.276 32.256 142.772 31.9047 143.838 31.202C144.903 30.4767 145.436 29.366 145.436 27.87C145.436 26.4873 144.903 25.4787 143.838 24.844C142.795 24.1867 141.299 23.858 139.35 23.858H135.474V32.256Z" fill="white" />
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M76.4928 17.3498C74.4101 14.915 70.9372 14.26 68.3277 16.4896C65.7183 18.7191 65.3509 22.4469 67.4001 25.0838C69.1039 27.2762 74.2601 31.9001 75.95 33.3967C76.1391 33.5641 76.2336 33.6479 76.3439 33.6807C76.4401 33.7095 76.5454 33.7095 76.6417 33.6807C76.7519 33.6479 76.8465 33.5641 77.0355 33.3967C78.7255 31.9001 83.8817 27.2762 85.5854 25.0838C87.6346 22.4469 87.3121 18.6957 84.6578 16.4896C82.0036 14.2835 78.5754 14.915 76.4928 17.3498Z" fill="white" />
-                        </svg>
-                      </a>
-                    <div class="header-selecter">Главная</div>
-                    <div class="header-selecter">Аниме</div>
-                    <div class="header-selecter">Расписание</div>
-                </div>
-                <div class="header-menu">
-                    <div class="header-selecter">Избранное</div>
-                    <div class="header-selecter">Логин</div>
-                </div>
+        <nav>
+         <div style="backdrop-filter: blur(2px);height: 6vh;" class="navbar-custom navbar-custom-select">
+          <div class="container navbar-custom">
+            <a class="navbar-brand" href="/">
+              <svg width="100%" height="100%" viewBox="0 0 150 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.618 34.5V12.332H16.592V16.548H7.616V21.682H15.3V25.898H7.616V34.5H2.618ZM29.1861 34.908C26.3074 34.908 24.1087 34.058 22.5901 32.358C21.0714 30.658 20.3121 27.9493 20.3121 24.232V12.332H25.3441V24.742C25.3441 26.918 25.6727 28.4367 26.3301 29.298C26.9874 30.1593 27.9394 30.59 29.1861 30.59C30.4327 30.59 31.3961 30.1593 32.0761 29.298C32.7561 28.4367 33.0961 26.918 33.0961 24.742V12.332H37.9241V24.232C37.9241 27.9493 37.1761 30.658 35.6801 32.358C34.2067 34.058 32.0421 34.908 29.1861 34.908ZM43.0594 34.5V12.332H48.5334L52.1034 22.192C52.3301 22.8267 52.5454 23.4953 52.7494 24.198C52.9534 24.9007 53.1687 25.592 53.3954 26.272H53.5314C53.7581 25.592 53.9621 24.9007 54.1434 24.198C54.3474 23.4953 54.5627 22.8267 54.7894 22.192L58.2914 12.332H63.7314V34.5H59.1754V26.374C59.1754 25.6487 59.2094 24.844 59.2774 23.96C59.3681 23.0533 59.4587 22.1467 59.5494 21.24C59.6627 20.3333 59.7534 19.5287 59.8214 18.826H59.6854L57.8834 24.096L54.7214 32.562H51.9674L48.8054 24.096L47.0374 18.826H46.9014C46.9921 19.5287 47.0827 20.3333 47.1734 21.24C47.2641 22.1467 47.3434 23.0533 47.4114 23.96C47.5021 24.844 47.5474 25.6487 47.5474 26.374V34.5H43.0594ZM89.8198 34.5V12.196H95.3958C98.8411 12.196 101.459 13.1593 103.25 15.086C105.04 16.99 105.936 19.71 105.936 23.246C105.936 26.8047 105.04 29.57 103.25 31.542C101.482 33.514 98.9091 34.5 95.5318 34.5H89.8198ZM92.6418 32.188H95.1918C97.7984 32.188 99.7478 31.406 101.04 29.842C102.354 28.2553 103.012 26.0567 103.012 23.246C103.012 20.4353 102.354 18.282 101.04 16.786C99.7478 15.2673 97.7984 14.508 95.1918 14.508H92.6418V32.188ZM118.66 34.908C117.141 34.908 115.77 34.602 114.546 33.99C113.344 33.378 112.392 32.3693 111.69 30.964C110.987 29.5587 110.636 27.666 110.636 25.286V12.196H113.458V25.354C113.458 27.1447 113.684 28.5613 114.138 29.604C114.614 30.624 115.237 31.3493 116.008 31.78C116.801 32.2107 117.685 32.426 118.66 32.426C119.657 32.426 120.552 32.2107 121.346 31.78C122.139 31.3493 122.762 30.624 123.216 29.604C123.692 28.5613 123.93 27.1447 123.93 25.354V12.196H126.65V25.286C126.65 27.666 126.298 29.5587 125.596 30.964C124.893 32.3693 123.941 33.378 122.74 33.99C121.538 34.602 120.178 34.908 118.66 34.908ZM132.652 34.5V12.196H139.282C140.8 12.196 142.126 12.3773 143.26 12.74C144.416 13.1027 145.311 13.6807 145.946 14.474C146.603 15.2673 146.932 16.3213 146.932 17.636C146.932 18.7467 146.648 19.7553 146.082 20.662C145.538 21.546 144.733 22.158 143.668 22.498V22.634C145.005 22.8833 146.093 23.45 146.932 24.334C147.793 25.218 148.224 26.4307 148.224 27.972C148.224 29.4227 147.861 30.6353 147.136 31.61C146.433 32.5847 145.447 33.31 144.178 33.786C142.908 34.262 141.435 34.5 139.758 34.5H132.652ZM135.474 21.682H138.772C140.676 21.682 142.047 21.3533 142.886 20.696C143.724 20.0387 144.144 19.1433 144.144 18.01C144.144 16.718 143.702 15.8 142.818 15.256C141.956 14.712 140.653 14.44 138.908 14.44H135.474V21.682ZM135.474 32.256H139.35C141.276 32.256 142.772 31.9047 143.838 31.202C144.903 30.4767 145.436 29.366 145.436 27.87C145.436 26.4873 144.903 25.4787 143.838 24.844C142.795 24.1867 141.299 23.858 139.35 23.858H135.474V32.256Z" fill="white" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M76.4928 17.3498C74.4101 14.915 70.9372 14.26 68.3277 16.4896C65.7183 18.7191 65.3509 22.4469 67.4001 25.0838C69.1039 27.2762 74.2601 31.9001 75.95 33.3967C76.1391 33.5641 76.2336 33.6479 76.3439 33.6807C76.4401 33.7095 76.5454 33.7095 76.6417 33.6807C76.7519 33.6479 76.8465 33.5641 77.0355 33.3967C78.7255 31.9001 83.8817 27.2762 85.5854 25.0838C87.6346 22.4469 87.3121 18.6957 84.6578 16.4896C82.0036 14.2835 78.5754 14.915 76.4928 17.3498Z" fill="white" />
+              </svg>
+            </a>
+            <div class="navbar-list">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link foryou" aria-current="page" href="https://vk.com/fumodub">Для тебя</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Аниме</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/anime-all">Все аниме</a></li>
+                    <li><a class="dropdown-item" href="/film">Фильмы</a></li>
+                    <li><a class="dropdown-item" href="/ova">Овы</a></li>
+                    <li><a class="dropdown-item" href="/ona">Оны</a></li>
+                    <li><a class="dropdown-item" href="/hentai">Хентай</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Манга</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/manga">Манга</a></li>
+                    <li><a class="dropdown-item" href="/manga-hentai">Хентай манга</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/dorama">Дорамы</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/schedule.html">Расписание</a>
+                </li>
+              </ul>
+              <form id="quicksearch" method="post" class="search" role="search">
+                <input type="hidden" name="do" value="search">
+                <input type="hidden" name="subaction" value="search">
+                <input id="story" name="story" type="text" autocomplete="off" placeholder="Стать любимой собачкой">
+                <button class="button" type="submit">
+                  <svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.75 15.75L13.1251 13.125M15 8.625C15 12.1458 12.1458 15 8.625 15C5.10418 15 2.25 12.1458 2.25 8.625C2.25 5.10418 5.10418 2.25 8.625 2.25C12.1458 2.25 15 5.10418 15 8.625Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </form>
+              <div class="btn-header-right">
+                {login}
+              </div>
             </div>
-        </div>
-    </header>
+          </div>
+         </div>
+        </nav>
+      </header>
     <main>
         <section class="container">
             <div class="home-main">
                 <div class="home-main-left">
                     <a href="#" class="home-main-left-links">
                         <div class="home-main-left-links-image">
-                            <img src="images/ookami-to-koushinryou-v2-rus-low.jpg" alt="">
+                            <img class="lazy" src="src/img/bite.jpg" data-src="images/ookami-to-koushinryou-v2-rus-low.jpg" alt="">
                         </div>
                     </a>
                 </div>
@@ -64,12 +102,12 @@
                                 <div class="home-main-right-swiper-content">
                                     <div class="home-main-right-swiper-image">
                                         <div class="im01">
-                                            <img src="images/mahoubg.png" alt="">
+                                            <img class="lazy" src="src/img/bite.jpg" data-src="images/mahoubg.png" alt="">
                                         </div>
                                         <div class="swiper-info-content">
                                             <div class="ogls">
                                                 <a class="swiper-logo" href="">
-                                                    <img src="images/Mahou Logo rus.png" alt="">
+                                                    <img class="lazy" src="src/img/bite.jpg" data-src="images/Mahou Logo rus.png" alt="">
                                                 </a>
                                                 <span class="episodes">5 из 13 эп. <span class="age">18+</span></span>
                                                 <span class="studio">StudioZalups</span>
@@ -77,16 +115,16 @@
                                                 <div class="swiper-desc"><span>Торговец Крафт Лоуренс странствует по миру, зарабатывая деньги ради давней мечты — осесть в каком-нибудь городе и открыть собственный магазин. Уезжая из очередной деревни с грузом пшеницы, в своей повозке он обнаруживает спящую в колосьях прекрасную девушку. Выглядит она по меньшей мере необычно: полностью обнажённая, однако с пушистым хвостом и волчьими ушками. Проснувшись, та рассказывает Лоуренсу, что местные жители столетиями считают её богиней плодородия, делают подношения, а праздник урожая посвящают ей. Впрочем, сама она себя богиней не считает, и зовут её Холо. В последнее же время с развитием сельского хозяйства сельчане перестали зависеть от её помощи, сохранив лишь традицию, но не более. Холо решила отправиться на родину, в северные земли, и просит Лоуренса доставить её туда, посулив, что в накладе тот не останется. Хорошо всё обдумав, Лоуренс соглашается...</span></div>
                                                 <div class="screenshots">
                                                     <ul class="xfieldimagegallery screenshots">
-                                                        <li><img src="images/img1.jpg" alt="Скрин1"></li>
-                                                        <li><img src="images/img1.jpg" alt="Скрин2"></li>
-                                                        <li><img src="images/img1.jpg" alt="Скрин3"></li>
+                                                        <li><img class="lazy" src="src/img/bite.jpg" data-src="images/img1.jpg" alt="Скрин1"></li>
+                                                        <li><img class="lazy" src="src/img/bite.jpg" data-src="images/img1.jpg" alt="Скрин2"></li>
+                                                        <li><img class="lazy" src="src/img/bite.jpg" data-src="images/img1.jpg" alt="Скрин3"></li>
                                                      </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <a class="home-main-right-poster" href="#">
-                                        <img src="images/mahou rus.png" alt="">
+                                        <img class="lazy" src="src/img/bite.jpg" data-src="images/mahou rus.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -94,12 +132,12 @@
                                 <div class="home-main-right-swiper-content">
                                     <div class="home-main-right-swiper-image">
                                         <div class="im01">
-                                            <img src="images/img2.webp" alt="">
+                                            <img class="lazy" src="src/img/bite.jpg" data-src="images/img2.webp" alt="">
                                         </div>
                                         <div class="swiper-info-content">
                                             <div class="ogls">
                                                 <a class="swiper-logo" href="">
-                                                    <img src="images/Shikanoko logo.png" alt="">
+                                                    <img class="lazy" src="src/img/bite.jpg" data-src="images/Shikanoko logo.png" alt="">
                                                 </a>
                                                 <span class="episodes">5 из 13 эп. <span class="age">18+</span></span>
                                                 <span class="studio">StudioZalups</span>
@@ -107,16 +145,16 @@
                                                 <div class="swiper-desc"><span>Торговец Крафт Лоуренс странствует по миру, зарабатывая деньги ради давней мечты — осесть в каком-нибудь городе и открыть собственный магазин. Уезжая из очередной деревни с грузом пшеницы, в своей повозке он обнаруживает спящую в колосьях прекрасную девушку. Выглядит она по меньшей мере необычно: полностью обнажённая, однако с пушистым хвостом и волчьими ушками. Проснувшись, та рассказывает Лоуренсу, что местные жители столетиями считают её богиней плодородия, делают подношения, а праздник урожая посвящают ей. Впрочем, сама она себя богиней не считает, и зовут её Холо. В последнее же время с развитием сельского хозяйства сельчане перестали зависеть от её помощи, сохранив лишь традицию, но не более. Холо решила отправиться на родину, в северные земли, и просит Лоуренса доставить её туда, посулив, что в накладе тот не останется. Хорошо всё обдумав, Лоуренс соглашается...</span></div>
                                                 <div class="screenshots">
                                                     <ul class="xfieldimagegallery screenshots">
-                                                        <li><img src="images/img1.jpg" alt="Скрин1"></li>
-                                                        <li><img src="images/img1.jpg" alt="Скрин2"></li>
-                                                        <li><img src="images/img1.jpg" alt="Скрин3"></li>
+                                                        <li><img class="lazy" src="src/img/bite.jpg" data-src="images/img1.jpg" alt="Скрин1"></li>
+                                                        <li><img class="lazy" src="src/img/bite.jpg" data-src="images/img1.jpg" alt="Скрин2"></li>
+                                                        <li><img class="lazy" src="src/img/bite.jpg" data-src="images/img1.jpg" alt="Скрин3"></li>
                                                      </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <a class="home-main-right-poster" href="#">
-                                        <img src="images/Mushoku Tensei II rus.png" alt="">
+                                        <img class="lazy" src="src/img/bite.jpg" data-src="images/Mushoku Tensei II rus.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -126,6 +164,85 @@
                 </div>
             </div>
         </section>
+        <section class="title-list-name container">
+            <div class="title-list-name-btns">
+                <div class="title-list-title">Последние онгоинги</div>
+                <div class="title-list-btn">
+                    <a href="#">Посмотреть все</a>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="anime-list">
+                <div class="swiper-list swiper-container anime-list-swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="swiper-slide swiper-slide-poster anime-card">
+                            <div class="anime-image">
+                                <img src="src/img/bite.jpg" data-src="images/p1.png" class="lazy anime-poster-main" alt="">
+                                <div class="anime-poster-episodes">2 из 15 эп.</div>
+                            </div>
+                            <div class="anime-list-title">Пустоголовая ведьма</div>
+                        </a>
+                        <a href="#" class="swiper-slide swiper-slide-poster anime-card">
+                            <div class="anime-image">
+                                <img src="src/img/bite.jpg" data-src="images/p2.png" class="lazy anime-poster-main" alt="">
+                                <div class="anime-poster-episodes">6 из 12 эп.</div>
+                            </div>
+                            <div class="anime-list-title">Синий архив</div>
+                        </a>
+                        <a href="#" class="swiper-slide swiper-slide-poster anime-card">
+                            <div class="anime-image">
+                                <img src="src/img/bite.jpg" data-src="images/p3.png" class="lazy anime-poster-main" alt="">
+                                <div class="anime-poster-episodes">9 из 12 эп.</div>
+                            </div>
+                            <div class="anime-list-title">Злодейка девяносто девятого уровня: «Я босс, но не король демонов»</div>
+                        </a>
+                        <a href="#" class="swiper-slide swiper-slide-poster anime-card">
+                            <div class="anime-image">
+                                <img src="src/img/bite.jpg" data-src="images/p4.png" class="lazy anime-poster-main" alt="">
+                                <div class="anime-poster-episodes">8 из 12 эп.</div>
+                            </div>
+                            <div class="anime-list-title">Песнь ночных сов</div>
+                        </a>
+                        <a href="#" class="swiper-slide swiper-slide-poster anime-card">
+                            <div class="anime-image">
+                                <img src="src/img/bite.jpg" data-src="images/p5.png" class="lazy anime-poster-main" alt="">
+                                <div class="anime-poster-episodes">6 из 12 эп.</div>
+                            </div>
+                            <div class="anime-list-title">Синий архив</div>
+                        </a>
+                        <a href="#" class="swiper-slide swiper-slide-poster anime-card">
+                            <div class="anime-image">
+                                <img src="src/img/bite.jpg" data-src="images/p6.png" class="lazy anime-poster-main" alt="">
+                                <div class="anime-poster-episodes">24 из 46 эп.</div>
+                            </div>
+                            <div class="anime-list-title">Несносные пришельцы</div>
+                        </a>
+                        <a href="#" class="swiper-slide swiper-slide-poster anime-card">
+                            <div class="anime-image">
+                                <img src="src/img/bite.jpg" data-src="images/p7.png" class="lazy anime-poster-main" alt="">
+                                <div class="anime-poster-episodes">7 из 12 эп.</div>
+                            </div>
+                            <div class="anime-list-title">Любовь с кончиков пальцев</div>
+                        </a>
+                        <a href="#" class="swiper-slide swiper-slide-poster anime-card">
+                            <div class="anime-image">
+                                <img src="src/img/bite.jpg" data-src="images/p8.png" class="lazy anime-poster-main" alt="">
+                                <div class="anime-poster-episodes">5 из 12 эп.</div>
+                            </div>
+                            <div class="anime-list-title">Я дома, добро пожаловать</div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class=".swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
     </main>
+    <script>
+        var lazyLoadInstance = new LazyLoad({
+        });
+    </script>
 </body>
 </html>
